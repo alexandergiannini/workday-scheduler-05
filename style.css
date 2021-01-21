@@ -76,6 +76,20 @@ body {
     border-color: #d3d3d3; 
   }
 /*changes the font size for the time within the div rows*/
+/*This is how im centering the times within the rows*/
   div h1 {
       font-size: 15px;
+      padding-top: 30px;
+  }
+
+  /*this is how im displaying the time and the text content on the same row*/
+  .col-sm-12 {
+      display: inline-flex
+  }
+
+  /*This is how im centered the p text (for when users input their calendar field*/
+  /*also adjusting the placement of the text to be more to the right*/
+  div p {
+      padding-top: 27px;
+      padding-left: 720px;
   }
