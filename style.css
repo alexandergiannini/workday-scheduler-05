@@ -73,7 +73,7 @@ body {
   /*this is how im creating the rows*/
   div.row {
     border: 1px solid;
-    border-color: #d3d3d3; 
+    border-color: black; 
   }
 /*changes the font size for the time within the div rows*/
 /*This is how im centering the times within the rows*/
