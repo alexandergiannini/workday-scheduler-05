@@ -84,12 +84,27 @@ body {
 
   /*this is how im displaying the time and the text content on the same row*/
   .col-sm-12 {
-      display: inline-flex
+      display: inline-flex;
+      text-align: right;
+      position: relative;
   }
 
   /*This is how im centered the p text (for when users input their calendar field*/
   /*also adjusting the placement of the text to be more to the right*/
   div p {
       padding-top: 27px;
-      padding-left: 720px;
+      /*padding-left: 100px;*/
+      position: relative;
+      left: 100px;
+
   }
+
+  .btn {
+      background-color:#06AED5;
+      position: relative;
+      left: 700px;
+      border-color: black
+      
+  }
+
+ 
