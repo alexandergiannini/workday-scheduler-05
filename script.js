@@ -1,15 +1,12 @@
 let body = document.body 
-let editedWorkText
+let editedWorkText 
 
 ///variables declaring each row (for now)
 let row9am = document.querySelector(".row-9am")
-console.log(row9am)
 
 let row10am = document.querySelector(".row-10am") /// need to adjust this
-console.log(row10am)
 
 let row11am = document.querySelector(".row-11am")
-console.log(row11am)
 
 let row12pm = document.querySelector(".row-12pm")
 
@@ -52,9 +49,7 @@ let individualContainer = document.querySelectorAll("col-sm-12") ///need to adju
 console.log(individualContainer)
 let entireContainer = document.querySelector("container")
 
-
-
-let savedWork
+//let savedWork
 
 let workText9am = document.querySelector("#work-text-9am")
 let workText10am = document.querySelector("#work-text-10am")
@@ -318,10 +313,7 @@ let loadStorage5pm = function () {
      return myText.replace(/[""]/gi, '');
 }
 
-
-
-
-
+//row9am //workText9am
 workText9am.onclick = function () {
     editedWorkText = document.createElement('input')
     editedWorkText.setAttribute('type', 'text')
@@ -332,6 +324,7 @@ workText10am.onclick = function () {
     editedWorkText = document.createElement('input')
     editedWorkText.setAttribute('type', 'text')
     workText10am.parentNode.replaceChild(editedWorkText, workText10am)
+
 }
 
 workText11am.onclick = function () {
@@ -376,127 +369,134 @@ workText5pm.onclick = function () {
     workText5pm.parentNode.replaceChild(editedWorkText, workText5pm)
 }
 
+
+
 saveWork9am.onclick = function (event) {
-  //event.preventDefault()
   savedWork9am = editedWorkText.value
   workText9am = document.createElement("p")
-  workText9am.setAttribute('id', 'work-text-9am')
   workText9am.textContent = savedWork9am
   editedWorkText.parentNode.replaceChild(workText9am, editedWorkText)
   saveStorage9am()
 
-  //// this correctly loads the value
-  console.log(editedWorkText.value)
-/// below doesnt work
-//workText9am.textContent = loadStorage9am()
-
+  workText9am.onclick = function () {
+    editedWorkText = document.createElement('input')
+    editedWorkText.setAttribute('type', 'text')
+    workText9am.parentNode.replaceChild(editedWorkText, workText9am)
+    }
 }
 
 saveWork10am.onclick = function (event) {
-    //event.preventDefault()
     savedWork10am = editedWorkText.value
     workText10am = document.createElement("p")
     workText10am.textContent = savedWork10am
     editedWorkText.parentNode.replaceChild(workText10am, editedWorkText)
     saveStorage10am()
+
+
+    workText10am.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText10am.parentNode.replaceChild(editedWorkText, workText10am)
+    }
   }
 
   saveWork11am.onclick = function (event) {
-    //event.preventDefault()
     savedWork11am = editedWorkText.value
     workText11am = document.createElement("p")
     workText11am.textContent = savedWork11am
     editedWorkText.parentNode.replaceChild(workText11am, editedWorkText)
     saveStorage11am()
+
+    workText11am.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText11am.parentNode.replaceChild(editedWorkText, workText11am)
+    }
   }
 
   saveWork12pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork12pm = editedWorkText.value
     workText12pm = document.createElement("p")
     workText12pm.textContent = savedWork12pm
     editedWorkText.parentNode.replaceChild(workText12pm, editedWorkText)
     saveStorage12pm()
+
+    workText12pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText12pm.parentNode.replaceChild(editedWorkText, workText12pm)
+    }
   }
 
   saveWork1pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork1pm = editedWorkText.value
     workText1pm = document.createElement("p")
     workText1pm.textContent = savedWork1pm
     editedWorkText.parentNode.replaceChild(workText1pm, editedWorkText)
     saveStorage1pm()
+
+    workText1pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText1pm.parentNode.replaceChild(editedWorkText, workText1pm)
+    }
   }
 
   saveWork2pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork2pm = editedWorkText.value
     workText2pm = document.createElement("p")
     workText2pm.textContent = savedWork2pm
     editedWorkText.parentNode.replaceChild(workText2pm, editedWorkText)
     saveStorage2pm()
+
+    workText2pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText2pm.parentNode.replaceChild(editedWorkText, workText2pm)
+    }
   }
 
   saveWork3pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork3pm = editedWorkText.value
     workText3pm = document.createElement("p")
     workText3pm.textContent = savedWork3pm
     editedWorkText.parentNode.replaceChild(workText3pm, editedWorkText)
     saveStorage3pm()
+
+    workText3pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText3pm.parentNode.replaceChild(editedWorkText, workText3pm)
+    }
   }
 
   saveWork4pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork4pm = editedWorkText.value
     workText4pm = document.createElement("p")
     workText4pm.textContent = savedWork4pm
     editedWorkText.parentNode.replaceChild(workText4pm, editedWorkText)
     saveStorage4pm()
+
+    workText4pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText4pm.parentNode.replaceChild(editedWorkText, workText4pm)
+    }
   }
 
   saveWork5pm.onclick = function (event) {
-    //event.preventDefault()
     savedWork5pm = editedWorkText.value
     workText5pm = document.createElement("p")
     workText5pm.textContent = savedWork5pm
     editedWorkText.parentNode.replaceChild(workText5pm, editedWorkText)
     saveStorage5pm()
+
+    workText5pm.onclick = function () {
+        editedWorkText = document.createElement('input')
+        editedWorkText.setAttribute('type', 'text')
+        workText5pm.parentNode.replaceChild(editedWorkText, workText5pm)
+    }
   }
-
-//let workText = document.querySelectorAll("#work-text")
-//for (let count = 0; count < workText.length; count++) {
-   // workText[count].addEventListener('click', function () {
-     //   editedWorkText = document.createElement('input')
-     //   editedWorkText.setAttribute('type', 'text')
-      //  console.log(editedWorkText)
-      //  workText.parentNode.replaceChild(editedWorkText, workText)
-   // })
-//}
-
-//let createWorkSchedule = function (workText, workList) {
-   // let workRow = $("<div>").
-  //  addClass("col-sm-12")
-///
-  //  let workP = $("<p>")
-   // .addClass("m-1")
-   // .text(workText)
-
-  //  workRow.append(workP)
-
-  ///  $("row" + workList).append(workRow)
-
-//}
-
-/// question1 = document.createElement('h1');
-// question1.textContent = "Commonly used data types do NOT Include:";
-// question1.setAttribute('style', 'font-size:50px; padding-top: 90px');
-// h1Header.parentNode.replaceChild(question1, h1Header);
-
-//workText[1].addEventListener('click', function () {
-   // console.log('Hi')
-//})
-
 
 displayCurrentTime() //calling function to display current time
 
@@ -518,7 +518,16 @@ change4pmTimeColor()
 
 change5pmTimeColor()
 
+
+//let loadStorageDynamic = function (loadStorage9am, loadStorage10am, loadStorage11am, loadStorage12pm, loadStorage1pm, loadStorage2pm, loadStorage3pm, loadStorage4pm, loadStorage4pm) {
+
+//}
+
 /////right now, i have to add each data set in this order, in order for the data to appear
+
+
+
+
 workText9am.textContent = loadStorage9am()
 
 workText10am.textContent = loadStorage10am()

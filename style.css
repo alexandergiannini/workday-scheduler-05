@@ -94,17 +94,22 @@ body {
   div p {
       padding-top: 27px;
       /*padding-left: 100px;*/
-      position: relative;
+      position: absolute;
       left: 100px;
+      text-decoration: underline;
 
   }
 
   .btn {
       background-color:#06AED5;
-      position: relative;
-      left: 700px;
-      border-color: black
+      position: absolute; /*may need to adjust this later*/
+      left: 990px;
+      border-color: black;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      color: white;
+      font-size: 40px;
+      padding-bottom: 10px; 
+      padding-right: 50px;
       
   }
-
- 
