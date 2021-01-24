@@ -81,28 +81,23 @@ body {
       font-size: 15px;
       padding-top: 30px;
   }
-
   /*this is how im displaying the time and the text content on the same row*/
   .col-sm-12 {
       display: inline-flex;
       text-align: right;
       position: relative;
   }
-
   /*This is how im centered the p text (for when users input their calendar field*/
-  /*also adjusting the placement of the text to be more to the right*/
   div p {
       padding-top: 27px;
-      /*padding-left: 100px;*/
       position: absolute;
       left: 100px;
       text-decoration: underline;
-
   }
-
+/*adjusting the save buttons by using the btn class*/
   .btn {
       background-color:#06AED5;
-      position: absolute; /*may need to adjust this later*/
+      position: absolute;
       left: 990px;
       border-color: black;
       border-top-right-radius: 15px;
@@ -111,5 +106,4 @@ body {
       font-size: 40px;
       padding-bottom: 10px; 
       padding-right: 50px;
-      
   }
