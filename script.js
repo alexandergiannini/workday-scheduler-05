@@ -1,5 +1,5 @@
 //Declaring global variables to use in later functions
-let body = document.body;
+
 let editedWorkText;
 
 //variables declaring each row 
@@ -170,92 +170,92 @@ let change5pmTimeColor = function () {
 
 // save Storage and load storage functions for the 9am row
 let saveStorage9am = function () {
-    localStorage.setItem("workText9am", JSON.stringify(savedWork9am));
+    localStorage.setItem("workText9am", savedWork9am);
 }
 
-let loadStorage9am = function () {
-    let myText = localStorage.getItem("workText9am");
-    return myText.replace(/[""]/gi, '');
+function loadStorage9am() {
+    let myText = localStorage.getItem("workText9am") || "Select this text to input your event!";
+    $('#work-text-9am').text(myText);
 }
 
 // save Storage and load storage functions for the 10am row
 let saveStorage10am = function () {
-    localStorage.setItem("workText10am", JSON.stringify(savedWork10am));
+    localStorage.setItem("workText10am", savedWork10am);
 }
 
-let loadStorage10am = function () {
-    let myText = localStorage.getItem("workText10am");
-    return myText.replace(/[""]/gi, '');
+function loadStorage10am () {
+    let myText = localStorage.getItem("workText10am") || "Select this text to input your event!";
+    $('#work-text-10am').text(myText);
 }
 
 // save Storage and load storage functions for the 11am row
 let saveStorage11am = function () {
-    localStorage.setItem("workText11am", JSON.stringify(savedWork11am));
+    localStorage.setItem("workText11am", savedWork11am);
 }
 
-let loadStorage11am = function () {
-    let myText = localStorage.getItem("workText11am");
-    return myText.replace(/[""]/gi, '');
+function loadStorage11am() {
+    let myText = localStorage.getItem("workText11am") || "Select this text to input your event!";
+    $('#work-text-11am').text(myText);
 }
 
 // save Storage and load storage functions for the 12pm row
 let saveStorage12pm = function () {
-    localStorage.setItem("workText12pm", JSON.stringify(savedWork12pm));
+    localStorage.setItem("workText12pm", savedWork12pm);
 }
 
-let loadStorage12pm = function () {
-    let myText = localStorage.getItem("workText12pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage12pm () {
+    let myText = localStorage.getItem("workText12pm") || "Select this text to input your event!";
+    $('#work-text-12pm').text(myText);
 }
 
 // save Storage and load storage functions for the 1pm row
 let saveStorage1pm = function () {
-    localStorage.setItem("workText1pm", JSON.stringify(savedWork1pm));
+    localStorage.setItem("workText1pm", savedWork1pm);
 }
 
-let loadStorage1pm = function () {
-    let myText = localStorage.getItem("workText1pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage1pm () {
+    let myText = localStorage.getItem("workText1pm") || "Select this text to input your event!";
+    $('#work-text-1pm').text(myText);
 }
 
 // save Storage and load storage functions for the 2pm row
 let saveStorage2pm = function () {
-    localStorage.setItem("workText2pm", JSON.stringify(savedWork2pm));
+    localStorage.setItem("workText2pm", savedWork2pm);
 }
 
-let loadStorage2pm = function () {
-    let myText = localStorage.getItem("workText2pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage2pm () {
+    let myText = localStorage.getItem("workText2pm") || "Select this text to input your event!";
+    $('#work-text-2pm').text(myText);
 }
 
 // save Storage and load storage functions for the 3pm row
 let saveStorage3pm = function () {
-    localStorage.setItem("workText3pm", JSON.stringify(savedWork3pm));
+    localStorage.setItem("workText3pm", savedWork3pm);
 }
 
-let loadStorage3pm = function () {
-    let myText = localStorage.getItem("workText3pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage3pm () {
+    let myText = localStorage.getItem("workText3pm") || "Select this text to input your event!";
+    $('#work-text-3pm').text(myText);
 }
 
 // save Storage and load storage functions for the 4pm row
 let saveStorage4pm = function () {
-    localStorage.setItem("workText4pm", JSON.stringify(savedWork4pm));
+    localStorage.setItem("workText4pm", savedWork4pm);
 }
 
-let loadStorage4pm = function () {
-    let myText = localStorage.getItem("workText4pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage4pm () {
+    let myText = localStorage.getItem("workText4pm") || "Select this text to input your event!";
+    $('#work-text-4pm').text(myText);
 }
 
 // save Storage and load storage functions for the 5pm row
 let saveStorage5pm = function () {
-    localStorage.setItem("workText5pm", JSON.stringify(savedWork5pm));
+    localStorage.setItem("workText5pm", savedWork5pm);
 }
 
-let loadStorage5pm = function () {
-    let myText = localStorage.getItem("workText5pm");
-    return myText.replace(/[""]/gi, '');
+function loadStorage5pm () {
+    let myText = localStorage.getItem("workText5pm") || "Select this text to input your event!";
+    $('#work-text-5pm').text(myText);
 }
 
 // function for below 9am row when trying to change the text/schedule text 
@@ -471,15 +471,29 @@ change4pmTimeColor();
 change5pmTimeColor();
 
 //// changing the text content to display whatever is loaded from local storage functions
-workText9am.textContent = loadStorage9am();
-workText10am.textContent = loadStorage10am();
-workText11am.textContent = loadStorage11am();
-workText12pm.textContent = loadStorage12pm();
-workText1pm.textContent = loadStorage1pm();
-workText2pm.textContent = loadStorage2pm();
-workText3pm.textContent = loadStorage3pm();
-workText4pm.textContent = loadStorage4pm();
-workText5pm.textContent = loadStorage5pm();
-
-
-
+$(document).ready(function () {
+    $(".btn").on("click", function () {
+    loadStorage9am();
+    loadStorage10am();
+    loadStorage11am();
+    loadStorage12pm();
+    loadStorage1pm();
+    loadStorage2pm();
+    loadStorage3pm();
+    loadStorage4pm();
+    loadStorage5pm();
+    })
+    function onReload()
+    {
+        loadStorage9am();
+        loadStorage10am();
+        loadStorage11am();
+        loadStorage12pm();
+        loadStorage1pm();
+        loadStorage2pm();
+        loadStorage3pm();
+        loadStorage4pm();
+        loadStorage5pm();
+    }
+    onReload();
+})
